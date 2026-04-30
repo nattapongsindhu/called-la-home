@@ -10,7 +10,7 @@ Called LA Home uses a static data architecture for speed, auditability, and simp
    Static JSON files contain curated housing program records for Los Angeles 90029 and the surrounding 10-mile coverage area.
 
 2. **Search Logic (`/src/lib`)**  
-   TypeScript utilities provide deterministic keyword, city, and category filtering. The current implementation uses simple filtering instead of Fuse.js to keep the first release small and easy to audit.
+   TypeScript utilities provide deterministic keyword, city, category, and eligibility filtering. The current implementation uses simple filtering instead of Fuse.js to keep the release small and easy to audit.
 
 3. **Frontend (`/src/app` and `/src/components`)**  
    Next.js App Router and React components render a minimalist search interface with fast client-side filtering.
@@ -22,6 +22,7 @@ Called LA Home uses a static data architecture for speed, auditability, and simp
 
 - Program data is reviewed manually before release.
 - Each record includes `distanceFrom90029Miles` for coverage transparency.
+- Each record includes `incomeLimits`; use `null` when a program requires manual review or uses non-comparable limits.
 - Source links must point to official agency pages.
 - Personal user data is not collected in this version.
 

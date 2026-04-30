@@ -20,6 +20,7 @@ export type HousingProgram = {
   url: string;
   lastReviewed: string;
   distanceFrom90029Miles: number;
+  incomeLimits: Record<string, number> | null;
   keywords: string[];
 };
 
@@ -27,4 +28,11 @@ export type ProgramFilters = {
   query?: string;
   city?: string;
   category?: ProgramCategory | "all";
+};
+
+export type EligibilityResult = {
+  status: "eligible" | "not-eligible" | "manual-review" | "not-checked";
+  maxIncome: number | null;
+  householdSizeUsed: number | null;
+  message: string;
 };

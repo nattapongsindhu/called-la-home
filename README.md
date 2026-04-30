@@ -26,6 +26,7 @@ Provide a fast, minimalist, and production-ready search interface for first-time
 - **Centralized Program Directory:** Curated records for LAHD, HACLA, LACDA, CalHFA, Burbank, Glendale, and Pasadena.
 - **Local JSON Ingestion:** Static housing program data ships from `/src/data` with no database dependency.
 - **Minimalist Search:** Instant keyword, city, and category filtering without account signup.
+- **Eligibility Check:** Local-only household size and income matching against listed income limits.
 - **Official Source Links:** Each program card links back to the responsible agency.
 - **Production-Minded Workflow:** Spec, plan, build, test, review, and ship documentation are tracked in the repository.
 - **Quality Gates:** CI runs lint, typecheck, tests, and production build checks.
@@ -78,3 +79,7 @@ npm run build
 ## Data Disclaimer
 
 This project is an informational directory, not legal, financial, or housing advice. Program rules change often. Users should confirm eligibility and deadlines on the linked official agency websites.
+
+## Privacy
+
+Eligibility inputs are processed locally in the browser session. The app does not store income, household size, or personal financial data.
