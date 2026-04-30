@@ -1,26 +1,47 @@
 # Called LA Home
 
-Called LA Home is a practical web app for finding housing programs around Los Angeles 90029 within roughly 10 miles, including Glendale, Burbank, and Pasadena.
+[![CI](https://github.com/nattapongsindhu/called-la-home/actions/workflows/ci.yml/badge.svg)](https://github.com/nattapongsindhu/called-la-home/actions/workflows/ci.yml)
+![Vercel Deployment](https://img.shields.io/badge/deploy-vercel-black?style=for-the-badge&logo=vercel)
+![Next.js](https://img.shields.io/badge/next.js-16-black?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-6-3178c6?style=for-the-badge&logo=typescript&logoColor=white)
+![License: MIT](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)
 
-The first release uses reviewed seed data from official program sources. Later phases can add automated ingestion, scheduled checks, and AI-assisted eligibility guidance.
+> A practical web application for discovering housing programs within a 10-mile radius of Los Angeles 90029, covering **Burbank**, **Glendale**, and **Pasadena**.
 
-## Scope
+Called LA Home aggregates reviewed official housing resources into a fast, searchable interface for first-time buyers, renters, and people comparing affordable housing assistance across nearby cities.
 
-- First-time homebuyer programs
-- Down payment assistance
-- Affordable housing resources
-- Rental assistance and Section 8 links
-- City and agency filters for Los Angeles, Glendale, Burbank, Pasadena, LA County, and California statewide programs
+## Coverage
 
-## Tech Stack
+- **Center:** Los Angeles, CA 90029
+- **Radius:** Approximately 10 miles
+- **Cities:** Los Angeles, Burbank, Glendale, Pasadena, and surrounding LA County areas
+- **Program Types:** First-time buyer, down payment assistance, rental assistance, affordable housing, and tenant support
 
-- Next.js App Router
-- TypeScript
-- Tailwind CSS
-- Node built-in assertions for utility tests
-- GitHub Actions for CI
+## Key Features
 
-Official source tracking lives in `docs/SOURCES.md`.
+- **Centralized Program Directory:** Curated records for LAHD, HACLA, LACDA, CalHFA, Burbank, Glendale, and Pasadena.
+- **Minimalist Search:** Instant keyword, city, and category filtering without account signup.
+- **Official Source Links:** Each program card links back to the responsible agency.
+- **Production-Minded Workflow:** Spec, plan, build, test, review, and ship documentation are tracked in the repository.
+- **Quality Gates:** CI runs lint, typecheck, tests, and production build checks.
+
+## Project Structure
+
+```text
+src/app/              Next.js App Router pages and global styles
+src/components/       Reusable UI components
+src/lib/              Program data, filtering utilities, and TypeScript types
+docs/                 Technical specification, plan, source review notes, and ship checklist
+.github/workflows/    GitHub Actions CI
+```
+
+## Documentation
+
+- [Technical Specification](docs/SPEC.md)
+- [Implementation Plan](docs/PLAN.md)
+- [Official Sources](docs/SOURCES.md)
+- [Ship Checklist](docs/SHIP.md)
+- [Contributing Guide](CONTRIBUTING.md)
 
 ## Local Development
 
@@ -42,10 +63,10 @@ npm run build
 
 ## Roadmap
 
-1. Version 1: manual reviewed dataset, search, filters, and official links.
-2. Version 2: scheduled source freshness checks with Vercel Cron.
+1. Version 1: Manual reviewed dataset, search, filters, and official links.
+2. Version 2: Scheduled source freshness checks with Vercel Cron.
 3. Version 3: Supabase storage and structured admin review workflow.
-4. Version 4: eligibility questionnaire for income, household size, credit score, and savings.
+4. Version 4: Eligibility questionnaire for income, household size, credit score, and savings.
 
 ## Data Disclaimer
 
