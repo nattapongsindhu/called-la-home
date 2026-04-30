@@ -17,8 +17,10 @@ The first release uses reviewed seed data from official program sources. Later p
 - Next.js App Router
 - TypeScript
 - Tailwind CSS
-- Vitest and Testing Library
+- Node built-in assertions for utility tests
 - GitHub Actions for CI
+
+Official source tracking lives in `docs/SOURCES.md`.
 
 ## Local Development
 
