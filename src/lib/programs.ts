@@ -1,0 +1,132 @@
+import type { HousingProgram } from "./types";
+
+export const housingPrograms: HousingProgram[] = [
+  {
+    id: "lahd-low-income-purchase-assistance",
+    agency: "Los Angeles Housing Department",
+    city: "Los Angeles",
+    serviceArea: "City of Los Angeles, including 90029 and nearby LA neighborhoods",
+    programName: "Low Income Purchase Assistance Program",
+    category: "first-time-buyer",
+    benefit: "Purchase assistance for eligible first-time homebuyers in the City of Los Angeles.",
+    eligibility: "Income, household size, property, and first-time buyer rules apply.",
+    status: "check-availability",
+    url: "https://housing.lacity.org/housing/help-for-homebuyers",
+    lastReviewed: "2026-04-30",
+    keywords: ["90029", "LAHD", "LIPA", "buyer", "purchase", "closing cost"]
+  },
+  {
+    id: "hacla-section-8",
+    agency: "Housing Authority of the City of Los Angeles",
+    city: "Los Angeles",
+    serviceArea: "City of Los Angeles",
+    programName: "Housing Choice Voucher Program",
+    category: "rental-assistance",
+    benefit: "Rental subsidy for eligible households when the waiting list is open.",
+    eligibility: "Eligibility depends on income, household composition, and waiting list status.",
+    status: "waitlist",
+    url: "https://www.hacla.org/en/about-section-8",
+    lastReviewed: "2026-04-30",
+    keywords: ["Section 8", "voucher", "rent", "HACLA", "tenant"]
+  },
+  {
+    id: "lacda-home-ownership",
+    agency: "Los Angeles County Development Authority",
+    city: "LA County",
+    serviceArea: "Eligible Los Angeles County areas",
+    programName: "Home Ownership Program",
+    category: "down-payment",
+    benefit: "Secondary financing assistance for eligible homebuyers in participating county areas.",
+    eligibility: "Buyer income, property location, occupancy, and lender requirements apply.",
+    status: "check-availability",
+    url: "https://www.lacda.org/home-ownership/home-ownership-program",
+    lastReviewed: "2026-04-30",
+    keywords: ["LACDA", "county", "down payment", "second loan", "buyer"]
+  },
+  {
+    id: "calhfa-myhome",
+    agency: "California Housing Finance Agency",
+    city: "Statewide",
+    serviceArea: "California",
+    programName: "MyHome Assistance Program",
+    category: "down-payment",
+    benefit: "Deferred-payment junior loan to help with down payment or closing costs.",
+    eligibility: "Must meet CalHFA, lender, income, property, and education requirements.",
+    status: "active",
+    url: "https://www.calhfa.ca.gov/homebuyer/programs/myhome.htm",
+    lastReviewed: "2026-04-30",
+    keywords: ["CalHFA", "MyHome", "down payment", "closing cost", "statewide"]
+  },
+  {
+    id: "calhfa-dream-for-all",
+    agency: "California Housing Finance Agency",
+    city: "Statewide",
+    serviceArea: "California",
+    programName: "Dream For All Shared Appreciation Loan",
+    category: "first-time-buyer",
+    benefit: "Shared appreciation assistance for qualified first-generation homebuyers when funds are available.",
+    eligibility: "Program rounds, lottery rules, income limits, and first-generation buyer criteria apply.",
+    status: "seasonal",
+    url: "https://www.calhfa.ca.gov/dream/",
+    lastReviewed: "2026-04-30",
+    keywords: ["CalHFA", "Dream For All", "first generation", "buyer", "assistance"]
+  },
+  {
+    id: "burbank-housing-authority",
+    agency: "Burbank Housing Authority",
+    city: "Burbank",
+    serviceArea: "City of Burbank",
+    programName: "Rental Assistance and Affordable Housing Resources",
+    category: "rental-assistance",
+    benefit: "Local rental assistance and affordable housing information for Burbank households.",
+    eligibility: "Program availability, income limits, and local residency or preference rules may apply.",
+    status: "check-availability",
+    url: "https://www.burbankca.gov/web/community-development/housing",
+    lastReviewed: "2026-04-30",
+    keywords: ["Burbank", "rent", "affordable", "voucher", "local housing"]
+  },
+  {
+    id: "glendale-affordable-housing",
+    agency: "City of Glendale Housing",
+    city: "Glendale",
+    serviceArea: "City of Glendale",
+    programName: "Affordable Housing Programs",
+    category: "affordable-housing",
+    benefit: "Affordable rental, ownership, and housing resource information for Glendale residents.",
+    eligibility: "Income, household, unit availability, and program-specific requirements apply.",
+    status: "check-availability",
+    url: "https://www.glendaleca.gov/government/departments/community-development/housing",
+    lastReviewed: "2026-04-30",
+    keywords: ["Glendale", "affordable", "ownership", "rent", "housing"]
+  },
+  {
+    id: "pasadena-housing-department",
+    agency: "City of Pasadena Housing Department",
+    city: "Pasadena",
+    serviceArea: "City of Pasadena",
+    programName: "Housing Assistance and Affordable Housing",
+    category: "affordable-housing",
+    benefit: "Local affordable housing, rental assistance, and housing program information.",
+    eligibility: "Program availability, income limits, and Pasadena-specific requirements apply.",
+    status: "check-availability",
+    url: "https://www.cityofpasadena.net/housing/",
+    lastReviewed: "2026-04-30",
+    keywords: ["Pasadena", "affordable", "rent", "buyer", "housing"]
+  },
+  {
+    id: "lahd-tenant-services",
+    agency: "Los Angeles Housing Department",
+    city: "Los Angeles",
+    serviceArea: "City of Los Angeles",
+    programName: "Tenant Services and Rent Stabilization Resources",
+    category: "tenant-support",
+    benefit: "Tenant protections, rent stabilization information, and housing support resources.",
+    eligibility: "Rules depend on property type, location, tenancy, and issue.",
+    status: "active",
+    url: "https://housing.lacity.org/residents",
+    lastReviewed: "2026-04-30",
+    keywords: ["tenant", "rent stabilization", "RSO", "LAHD", "eviction"]
+  }
+];
+
+export const cities = ["all", "Los Angeles", "Glendale", "Burbank", "Pasadena", "LA County", "Statewide"] as const;
