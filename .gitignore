@@ -2,8 +2,7 @@ node_modules
 .next
 out
 coverage
-.env
-.env.local
-.env*.local
+.env*
+!.env.example
 *.tsbuildinfo
 vercel.json.local

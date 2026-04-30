@@ -6,9 +6,19 @@
 [![TypeScript](https://img.shields.io/badge/typescript-6-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
-> A practical web application for discovering housing programs within a 10-mile radius of Los Angeles 90029, covering **Burbank**, **Glendale**, and **Pasadena**.
+> A production-ready housing assistance search platform for Los Angeles residents within a 10-mile radius of 90029, covering **Burbank**, **Glendale**, and **Pasadena**.
 
 Called LA Home is an integrated housing resource platform for the Los Angeles 90029 area and its 10-mile radius. It aggregates reviewed official housing resources into a fast, searchable interface for first-time buyers, renters, and people comparing affordable housing assistance across nearby cities.
+
+## Why This Project Matters
+
+Housing assistance information is spread across city, county, and state websites. Called LA Home reduces search friction by giving users one privacy-first place to compare:
+
+- First-time homebuyer programs
+- Rental assistance
+- Down payment help
+- Affordable housing resources
+- Local city housing departments
 
 ## Goal
 
@@ -34,6 +44,34 @@ Provide a fast, minimalist, and production-ready search interface for first-time
 - **Production-Minded Workflow:** Spec, plan, build, test, review, and ship documentation are tracked in the repository.
 - **Quality Gates:** CI runs lint, typecheck, tests, and production build checks.
 
+## IT Operations Skills Demonstrated
+
+- Production deployment with Vercel
+- GitHub Actions CI/CD workflow automation
+- Troubleshooting failing CI and runtime mismatches
+- Static data organization and validation
+- Privacy-first architecture with no database dependency
+- Security scanning with Dependabot and CodeQL
+- Documentation discipline for handoff and maintenance
+
+## Architecture
+
+```text
+User Browser
+   |
+   v
+Next.js Frontend
+   |
+   v
+Local JSON Data Layer
+   |
+   v
+Search, Filter, Eligibility Engine
+   |
+   v
+Vercel Deployment
+```
+
 ## Project Structure
 
 ```text
@@ -52,6 +90,9 @@ docs/                 Technical specification, plan, source review notes, and sh
 - [Implementation Plan](docs/PLAN.md)
 - [Official Sources](docs/SOURCES.md)
 - [Ship Checklist](docs/SHIP.md)
+- [Changelog](CHANGELOG.md)
+- [Security Policy](SECURITY.md)
+- [Support Guide](SUPPORT.md)
 - [Contributing Guide](CONTRIBUTING.md)
 
 ## Local Development

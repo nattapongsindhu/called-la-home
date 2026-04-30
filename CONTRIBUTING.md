@@ -15,3 +15,14 @@ Pull requests should include:
 - How it was tested
 - Any data source updates
 - Rollback notes
+
+Before submitting:
+
+```bash
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+```
+
+Do not commit secrets, `.env` files, or personal user data.
