@@ -17,7 +17,7 @@ Build a production-minded portfolio web app that aggregates housing program info
 
 ## Version 1 Scope
 
-- Manual seed data for key official programs
+- Manual JSON seed data for key official programs
 - Search by keyword
 - Filter by city and category
 - Program cards with benefit, status, eligibility notes, and official links
@@ -36,6 +36,7 @@ Build a production-minded portfolio web app that aggregates housing program info
 
 - Keep data source URLs official.
 - Do not store personal financial information in Version 1.
+- Do not require Supabase or database environment variables in Version 1.
 - Avoid over-engineered abstractions.
 - Make program data easy to audit and update.
 

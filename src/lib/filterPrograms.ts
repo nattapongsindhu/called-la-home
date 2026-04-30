@@ -17,6 +17,7 @@ export function filterPrograms(programs: HousingProgram[], filters: ProgramFilte
       program.programName,
       program.benefit,
       program.eligibility,
+      `${program.distanceFrom90029Miles} miles`,
       ...program.keywords
     ]
       .join(" ")

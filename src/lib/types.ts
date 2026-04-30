@@ -19,6 +19,7 @@ export type HousingProgram = {
   status: ProgramStatus;
   url: string;
   lastReviewed: string;
+  distanceFrom90029Miles: number;
   keywords: string[];
 };
 

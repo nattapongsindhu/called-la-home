@@ -14,4 +14,9 @@ const searchResults = filterPrograms(housingPrograms, { query: "section 8" });
 assert.equal(searchResults.length, 1);
 assert.equal(searchResults[0].agency, "Housing Authority of the City of Los Angeles");
 
+assert.equal(
+  housingPrograms.every((program) => typeof program.distanceFrom90029Miles === "number"),
+  true
+);
+
 console.log("filterPrograms assertions passed");

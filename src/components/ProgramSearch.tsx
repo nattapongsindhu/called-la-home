@@ -120,6 +120,7 @@ export function ProgramSearch() {
               <Badge>{program.city}</Badge>
               <Badge>{formatCategory(program.category)}</Badge>
               <Badge>{formatStatus(program.status)}</Badge>
+              <Badge>{program.distanceFrom90029Miles} mi from 90029</Badge>
             </div>
 
             <p className="mt-4 text-sm leading-6 text-slate-700">{program.benefit}</p>

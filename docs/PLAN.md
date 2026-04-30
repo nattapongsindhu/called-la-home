@@ -13,7 +13,8 @@ Definition of Done:
 Definition of Done:
 
 - `HousingProgram` type exists.
-- Reviewed seed records exist for LAHD, HACLA, LACDA, CalHFA, Burbank, Glendale, and Pasadena.
+- Reviewed JSON seed records exist in `/src/data` for LAHD, HACLA, LACDA, CalHFA, Burbank, Glendale, and Pasadena.
+- Each record includes `distanceFrom90029Miles`.
 - Filtering utilities are tested.
 
 ## Slice 3: Search UI

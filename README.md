@@ -8,7 +8,11 @@
 
 > A practical web application for discovering housing programs within a 10-mile radius of Los Angeles 90029, covering **Burbank**, **Glendale**, and **Pasadena**.
 
-Called LA Home aggregates reviewed official housing resources into a fast, searchable interface for first-time buyers, renters, and people comparing affordable housing assistance across nearby cities.
+Called LA Home is an integrated housing resource platform for the Los Angeles 90029 area and its 10-mile radius. It aggregates reviewed official housing resources into a fast, searchable interface for first-time buyers, renters, and people comparing affordable housing assistance across nearby cities.
+
+## Goal
+
+Provide a fast, minimalist, and production-ready search interface for first-time homebuyers and renters seeking housing assistance programs.
 
 ## Coverage
 
@@ -20,6 +24,7 @@ Called LA Home aggregates reviewed official housing resources into a fast, searc
 ## Key Features
 
 - **Centralized Program Directory:** Curated records for LAHD, HACLA, LACDA, CalHFA, Burbank, Glendale, and Pasadena.
+- **Local JSON Ingestion:** Static housing program data ships from `/src/data` with no database dependency.
 - **Minimalist Search:** Instant keyword, city, and category filtering without account signup.
 - **Official Source Links:** Each program card links back to the responsible agency.
 - **Production-Minded Workflow:** Spec, plan, build, test, review, and ship documentation are tracked in the repository.
@@ -30,6 +35,7 @@ Called LA Home aggregates reviewed official housing resources into a fast, searc
 ```text
 src/app/              Next.js App Router pages and global styles
 src/components/       Reusable UI components
+src/data/             Curated local JSON housing program datasets
 src/lib/              Program data, filtering utilities, and TypeScript types
 docs/                 Technical specification, plan, source review notes, and ship checklist
 .github/workflows/    GitHub Actions CI
@@ -38,6 +44,7 @@ docs/                 Technical specification, plan, source review notes, and sh
 ## Documentation
 
 - [Technical Specification](docs/SPEC.md)
+- [System Architecture](docs/SYSTEM_ARCHITECTURE.md)
 - [Implementation Plan](docs/PLAN.md)
 - [Official Sources](docs/SOURCES.md)
 - [Ship Checklist](docs/SHIP.md)
@@ -65,7 +72,7 @@ npm run build
 
 1. Version 1: Manual reviewed dataset, search, filters, and official links.
 2. Version 2: Scheduled source freshness checks with Vercel Cron.
-3. Version 3: Supabase storage and structured admin review workflow.
+3. Version 3: Static build-time ingestion and source freshness checks.
 4. Version 4: Eligibility questionnaire for income, household size, credit score, and savings.
 
 ## Data Disclaimer
