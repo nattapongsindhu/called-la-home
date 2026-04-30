@@ -27,6 +27,9 @@ Provide a fast, minimalist, and production-ready search interface for first-time
 - **Local JSON Ingestion:** Static housing program data ships from `/src/data` with no database dependency.
 - **Minimalist Search:** Instant keyword, city, and category filtering without account signup.
 - **Eligibility Check:** Local-only household size and income matching against listed income limits.
+- **Map Links:** Every program includes an agency address and a direct Google Maps search link.
+- **PWA Support:** Manifest and service worker files support mobile installation and offline shell fallback.
+- **Dark Mode:** Class-based theme switching supports light and dark viewing preferences.
 - **Official Source Links:** Each program card links back to the responsible agency.
 - **Production-Minded Workflow:** Spec, plan, build, test, review, and ship documentation are tracked in the repository.
 - **Quality Gates:** CI runs lint, typecheck, tests, and production build checks.

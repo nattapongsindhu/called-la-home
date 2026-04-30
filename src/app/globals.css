@@ -4,7 +4,27 @@
 
 :root {
   color-scheme: light;
-  background: #f8fafc;
+  --color-ink: #111827;
+  --color-trust: #1f4d7a;
+  --color-sage: #55715f;
+  --color-paper: #f8fafc;
+  --color-surface: #ffffff;
+  --color-muted: #475569;
+  --color-soft: #64748b;
+  --color-line: #d8dee6;
+  background: var(--color-paper);
+}
+
+.dark {
+  color-scheme: dark;
+  --color-ink: #f8fafc;
+  --color-trust: #8fbce6;
+  --color-sage: #9fc7a8;
+  --color-paper: #0f172a;
+  --color-surface: #111827;
+  --color-muted: #cbd5e1;
+  --color-soft: #94a3b8;
+  --color-line: #334155;
 }
 
 * {
@@ -13,8 +33,8 @@
 
 body {
   margin: 0;
-  background: #f8fafc;
-  color: #111827;
+  background: var(--color-paper);
+  color: var(--color-ink);
   font-family:
     Arial,
     Helvetica,

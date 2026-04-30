@@ -1,0 +1,18 @@
+{
+  "name": "Called LA Home",
+  "short_name": "LA Home",
+  "description": "Housing assistance finder for Los Angeles 90029, Burbank, Glendale, and Pasadena.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1f4d7a",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

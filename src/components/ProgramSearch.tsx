@@ -1,7 +1,7 @@
 "use client";
 
-import { Building2, ExternalLink, Filter, Home, Search, ShieldCheck } from "lucide-react";
-import { useMemo, useState } from "react";
+import { Building2, ExternalLink, Filter, Home, MapPin, Moon, Search, ShieldCheck, Sun } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 import { cities, housingPrograms } from "@/lib/programs";
 import { filterPrograms, formatCategory, formatStatus } from "@/lib/filterPrograms";
 import { checkEligibility, filterEligiblePrograms } from "@/lib/eligibility";
@@ -25,6 +25,20 @@ const categoryLabels: Record<ProgramCategory | "all", string> = {
   "tenant-support": "Tenant"
 };
 
+function getInitialDarkMode() {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  const storedTheme = window.localStorage.getItem("called-la-home-theme");
+
+  if (storedTheme) {
+    return storedTheme === "dark";
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+
 export function ProgramSearch() {
   const [query, setQuery] = useState("");
   const [city, setCity] = useState("all");
@@ -32,6 +46,12 @@ export function ProgramSearch() {
   const [eligibilityEnabled, setEligibilityEnabled] = useState(false);
   const [householdSize, setHouseholdSize] = useState(1);
   const [annualIncome, setAnnualIncome] = useState("");
+  const [isDarkMode, setIsDarkMode] = useState(getInitialDarkMode);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDarkMode);
+    window.localStorage.setItem("called-la-home-theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
 
   const parsedIncome = Number(annualIncome);
   const hasEligibilityInput = eligibilityEnabled && householdSize > 0 && Number.isFinite(parsedIncome) && parsedIncome > 0;
@@ -55,25 +75,35 @@ export function ProgramSearch() {
         <div>
           <p className="text-sm font-medium uppercase tracking-wide text-sage">LA housing program finder</p>
           <h1 className="mt-3 text-4xl font-semibold text-ink sm:text-5xl">Called LA Home</h1>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
             Search practical homebuyer, rental assistance, affordable housing, and tenant support programs around 90029,
             Glendale, Burbank, and Pasadena.
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-3 rounded border border-line bg-white p-4">
-          <Metric label="Programs" value={housingPrograms.length.toString()} />
-          <Metric label="Radius" value="10 mi" />
-          <Metric label="Mode" value="V1" />
+        <div className="grid gap-3">
+          <div className="grid grid-cols-3 gap-3 rounded border border-line bg-surface p-4">
+            <Metric label="Programs" value={housingPrograms.length.toString()} />
+            <Metric label="Radius" value="10 mi" />
+            <Metric label="Mode" value="V1" />
+          </div>
+          <button
+            className="inline-flex min-h-10 items-center justify-center gap-2 rounded border border-line bg-surface px-3 text-sm font-semibold text-ink hover:text-trust"
+            type="button"
+            onClick={() => setIsDarkMode((current) => !current)}
+          >
+            {isDarkMode ? <Sun aria-hidden="true" className="h-4 w-4" /> : <Moon aria-hidden="true" className="h-4 w-4" />}
+            {isDarkMode ? "Light mode" : "Dark mode"}
+          </button>
         </div>
       </div>
 
-      <div className="grid gap-3 rounded border border-line bg-white p-4 shadow-sm lg:grid-cols-[1fr_180px_220px]">
+      <div className="grid gap-3 rounded border border-line bg-surface p-4 shadow-sm lg:grid-cols-[1fr_180px_220px]">
         <label className="flex min-h-12 items-center gap-3 rounded border border-line bg-paper px-3">
           <Search aria-hidden="true" className="h-5 w-5 text-trust" />
           <span className="sr-only">Search programs</span>
           <input
-            className="w-full bg-transparent text-base text-ink outline-none placeholder:text-slate-400"
+            className="w-full bg-transparent text-base text-ink outline-none placeholder:text-soft"
             placeholder="Search 90029, Pasadena, down payment..."
             value={query}
             onChange={(event) => setQuery(event.target.value)}
@@ -113,13 +143,13 @@ export function ProgramSearch() {
         </label>
       </div>
 
-      <div className="rounded border border-line bg-white p-4 shadow-sm">
+      <div className="rounded border border-line bg-surface p-4 shadow-sm">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-start gap-3">
             <ShieldCheck aria-hidden="true" className="mt-1 h-5 w-5 text-trust" />
             <div>
               <h2 className="text-base font-semibold text-ink">Eligibility check</h2>
-              <p className="mt-1 text-sm leading-6 text-slate-600">
+              <p className="mt-1 text-sm leading-6 text-muted">
                 Compare household size and annual income against listed program limits. Inputs stay in this browser
                 session.
               </p>
@@ -140,7 +170,7 @@ export function ProgramSearch() {
         {eligibilityEnabled ? (
           <div className="mt-4 grid gap-3 border-t border-line pt-4 sm:grid-cols-2">
             <label className="flex min-h-12 items-center gap-3 rounded border border-line bg-paper px-3">
-              <span className="min-w-28 text-sm font-medium text-slate-700">Household</span>
+              <span className="min-w-28 text-sm font-medium text-muted">Household</span>
               <input
                 className="w-full bg-transparent text-base text-ink outline-none"
                 min="1"
@@ -152,9 +182,9 @@ export function ProgramSearch() {
             </label>
 
             <label className="flex min-h-12 items-center gap-3 rounded border border-line bg-paper px-3">
-              <span className="min-w-28 text-sm font-medium text-slate-700">Annual income</span>
+              <span className="min-w-28 text-sm font-medium text-muted">Annual income</span>
               <input
-                className="w-full bg-transparent text-base text-ink outline-none placeholder:text-slate-400"
+                className="w-full bg-transparent text-base text-ink outline-none placeholder:text-soft"
                 inputMode="numeric"
                 placeholder="85000"
                 type="number"
@@ -167,15 +197,15 @@ export function ProgramSearch() {
       </div>
 
       <div className="flex items-center justify-between gap-3">
-        <p className="text-sm text-slate-600">
+        <p className="text-sm text-muted">
           Showing <span className="font-semibold text-ink">{results.length}</span> of {housingPrograms.length} programs
         </p>
-        <p className="text-sm text-slate-500">Last reviewed: Apr 30, 2026</p>
+        <p className="text-sm text-soft">Last reviewed: Apr 30, 2026</p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
         {results.map((program) => (
-          <article key={program.id} className="rounded border border-line bg-white p-5 shadow-sm">
+          <article key={program.id} className="rounded border border-line bg-surface p-5 shadow-sm">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-sm font-medium text-sage">{program.agency}</p>
@@ -192,30 +222,42 @@ export function ProgramSearch() {
               {eligibilityEnabled ? <Badge>{getEligibilityLabel(program, parsedIncome, householdSize)}</Badge> : null}
             </div>
 
-            <p className="mt-4 text-sm leading-6 text-slate-700">{program.benefit}</p>
-            <p className="mt-3 text-sm leading-6 text-slate-600">{program.eligibility}</p>
+            <p className="mt-4 text-sm leading-6 text-muted">{program.benefit}</p>
+            <p className="mt-3 text-sm leading-6 text-muted">{program.eligibility}</p>
             {eligibilityEnabled ? (
-              <p className="mt-3 text-sm leading-6 text-slate-600">
+              <p className="mt-3 text-sm leading-6 text-muted">
                 {checkEligibility(parsedIncome, program.incomeLimits, householdSize).message}
               </p>
             ) : null}
-            <p className="mt-3 text-sm text-slate-500">{program.serviceArea}</p>
+            <p className="mt-3 text-sm text-soft">{program.serviceArea}</p>
+            <p className="mt-2 text-sm text-soft">{program.agencyAddress}</p>
 
-            <a
-              className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-trust hover:text-sage"
-              href={program.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Official source
-              <ExternalLink aria-hidden="true" className="h-4 w-4" />
-            </a>
+            <div className="mt-5 flex flex-wrap gap-4">
+              <a
+                className="inline-flex items-center gap-2 text-sm font-semibold text-trust hover:text-sage"
+                href={program.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Official source
+                <ExternalLink aria-hidden="true" className="h-4 w-4" />
+              </a>
+              <a
+                className="inline-flex items-center gap-2 text-sm font-semibold text-trust hover:text-sage"
+                href={program.mapUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View map
+                <MapPin aria-hidden="true" className="h-4 w-4" />
+              </a>
+            </div>
           </article>
         ))}
       </div>
 
       {results.length === 0 ? (
-        <div className="rounded border border-line bg-white p-8 text-center text-slate-600">
+        <div className="rounded border border-line bg-surface p-8 text-center text-muted">
           No programs matched this search. Try a city, agency, or phrase like Section 8, CalHFA, or buyer.
         </div>
       ) : null}
@@ -244,12 +286,12 @@ function getEligibilityLabel(program: (typeof housingPrograms)[number], annualIn
 function Metric({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="text-xs font-medium uppercase tracking-wide text-slate-500">{label}</p>
+      <p className="text-xs font-medium uppercase tracking-wide text-soft">{label}</p>
       <p className="mt-1 text-2xl font-semibold text-ink">{value}</p>
     </div>
   );
 }
 
 function Badge({ children }: { children: React.ReactNode }) {
-  return <span className="rounded border border-line bg-paper px-2.5 py-1 text-xs font-medium text-slate-700">{children}</span>;
+  return <span className="rounded border border-line bg-paper px-2.5 py-1 text-xs font-medium text-muted">{children}</span>;
 }

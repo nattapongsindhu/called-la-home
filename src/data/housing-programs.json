@@ -12,6 +12,8 @@
     "url": "https://housing.lacity.gov/housing/helping-low-income-first-time-homebuyers",
     "lastReviewed": "2026-04-30",
     "distanceFrom90029Miles": 0,
+    "agencyAddress": "1910 Sunset Blvd, Suite 300, Los Angeles, CA 90026",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=1910%20Sunset%20Blvd%20Suite%20300%20Los%20Angeles%20CA%2090026",
     "incomeLimits": {
       "1": 84850,
       "2": 96950,
@@ -37,6 +39,8 @@
     "url": "https://www.hacla.org/en/about-section-8",
     "lastReviewed": "2026-04-30",
     "distanceFrom90029Miles": 0,
+    "agencyAddress": "2600 Wilshire Blvd, Los Angeles, CA 90057",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=2600%20Wilshire%20Blvd%20Los%20Angeles%20CA%2090057",
     "incomeLimits": null,
     "keywords": ["Section 8", "voucher", "rent", "HACLA", "tenant"]
   },
@@ -53,6 +57,8 @@
     "url": "https://www.lacda.org/home-ownership/home-ownership-program",
     "lastReviewed": "2026-04-30",
     "distanceFrom90029Miles": 10,
+    "agencyAddress": "700 W Main St, Alhambra, CA 91801",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=700%20W%20Main%20St%20Alhambra%20CA%2091801",
     "incomeLimits": {
       "1": 89550,
       "2": 102300,
@@ -78,6 +84,8 @@
     "url": "https://www.calhfa.ca.gov/homebuyer/programs/myhome.htm",
     "lastReviewed": "2026-04-30",
     "distanceFrom90029Miles": 0,
+    "agencyAddress": "500 Capitol Mall, Suite 1400, Sacramento, CA 95814",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=500%20Capitol%20Mall%20Suite%201400%20Sacramento%20CA%2095814",
     "incomeLimits": null,
     "keywords": ["CalHFA", "MyHome", "down payment", "closing cost", "statewide"]
   },
@@ -94,6 +102,8 @@
     "url": "https://cloud.calhfa.ca.gov/dream/index.htm",
     "lastReviewed": "2026-04-30",
     "distanceFrom90029Miles": 0,
+    "agencyAddress": "500 Capitol Mall, Suite 1400, Sacramento, CA 95814",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=500%20Capitol%20Mall%20Suite%201400%20Sacramento%20CA%2095814",
     "incomeLimits": null,
     "keywords": ["CalHFA", "Dream For All", "first generation", "buyer", "assistance"]
   },
@@ -110,6 +120,8 @@
     "url": "https://www.burbankca.gov/web/community-development/housing",
     "lastReviewed": "2026-04-30",
     "distanceFrom90029Miles": 8,
+    "agencyAddress": "150 N Third St, Burbank, CA 91502",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=150%20N%20Third%20St%20Burbank%20CA%2091502",
     "incomeLimits": null,
     "keywords": ["Burbank", "rent", "affordable", "voucher", "local housing"]
   },
@@ -126,6 +138,8 @@
     "url": "https://www.glendaleca.gov/government/departments/community-development/housing",
     "lastReviewed": "2026-04-30",
     "distanceFrom90029Miles": 6,
+    "agencyAddress": "633 E Broadway, Glendale, CA 91206",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=633%20E%20Broadway%20Glendale%20CA%2091206",
     "incomeLimits": null,
     "keywords": ["Glendale", "affordable", "ownership", "rent", "housing"]
   },
@@ -142,6 +156,8 @@
     "url": "https://www.cityofpasadena.net/housing/",
     "lastReviewed": "2026-04-30",
     "distanceFrom90029Miles": 10,
+    "agencyAddress": "649 N Fair Oaks Ave, Pasadena, CA 91103",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=649%20N%20Fair%20Oaks%20Ave%20Pasadena%20CA%2091103",
     "incomeLimits": null,
     "keywords": ["Pasadena", "affordable", "rent", "buyer", "housing"]
   },
@@ -158,6 +174,8 @@
     "url": "https://housing.lacity.gov/residents",
     "lastReviewed": "2026-04-30",
     "distanceFrom90029Miles": 0,
+    "agencyAddress": "1910 Sunset Blvd, Suite 300, Los Angeles, CA 90026",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=1910%20Sunset%20Blvd%20Suite%20300%20Los%20Angeles%20CA%2090026",
     "incomeLimits": null,
     "keywords": ["tenant", "rent stabilization", "RSO", "LAHD", "eviction"]
   }

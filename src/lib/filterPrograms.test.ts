@@ -25,6 +25,11 @@ assert.equal(
   true
 );
 
+assert.equal(
+  housingPrograms.every((program) => program.agencyAddress.length > 0 && program.mapUrl.startsWith("https://www.google.com/maps/search/")),
+  true
+);
+
 const lahdProgram = housingPrograms.find((program) => program.id === "lahd-low-income-purchase-assistance");
 assert.ok(lahdProgram);
 assert.equal(checkEligibility(85000, lahdProgram.incomeLimits, 2).status, "eligible");

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Called LA Home icon">
+  <rect width="512" height="512" rx="96" fill="#1f4d7a"/>
+  <path d="M116 244 256 132l140 112v148a24 24 0 0 1-24 24h-80v-96h-72v96h-80a24 24 0 0 1-24-24V244Z" fill="#f8fafc"/>
+  <path d="M156 230v-82h56v37" fill="none" stroke="#9fc7a8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M256 132 96 260" fill="none" stroke="#9fc7a8" stroke-width="28" stroke-linecap="round"/>
+  <path d="m256 132 160 128" fill="none" stroke="#9fc7a8" stroke-width="28" stroke-linecap="round"/>
+</svg>

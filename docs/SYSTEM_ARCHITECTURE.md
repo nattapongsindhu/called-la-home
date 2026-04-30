@@ -13,15 +13,19 @@ Called LA Home uses a static data architecture for speed, auditability, and simp
    TypeScript utilities provide deterministic keyword, city, category, and eligibility filtering. The current implementation uses simple filtering instead of Fuse.js to keep the release small and easy to audit.
 
 3. **Frontend (`/src/app` and `/src/components`)**  
-   Next.js App Router and React components render a minimalist search interface with fast client-side filtering.
+   Next.js App Router and React components render a minimalist search interface with fast client-side filtering, dark mode, and agency map links.
 
 4. **Deployment**  
    Vercel builds the static application from the `main` branch. No Supabase keys or database secrets are required.
+
+5. **PWA Layer (`/public`)**  
+   The manifest and service worker provide installability metadata and a lightweight offline shell fallback.
 
 ## Data Policy
 
 - Program data is reviewed manually before release.
 - Each record includes `distanceFrom90029Miles` for coverage transparency.
+- Each record includes `agencyAddress` and `mapUrl` for direct map access.
 - Each record includes `incomeLimits`; use `null` when a program requires manual review or uses non-comparable limits.
 - Source links must point to official agency pages.
 - Personal user data is not collected in this version.

@@ -20,6 +20,8 @@ export type HousingProgram = {
   url: string;
   lastReviewed: string;
   distanceFrom90029Miles: number;
+  agencyAddress: string;
+  mapUrl: string;
   incomeLimits: Record<string, number> | null;
   keywords: string[];
 };
