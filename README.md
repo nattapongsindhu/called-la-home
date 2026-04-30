@@ -1,10 +1,10 @@
 # Called LA Home
 
 [![CI](https://github.com/nattapongsindhu/called-la-home/actions/workflows/ci.yml/badge.svg)](https://github.com/nattapongsindhu/called-la-home/actions/workflows/ci.yml)
-![Vercel Deployment](https://img.shields.io/badge/deploy-vercel-black?style=for-the-badge&logo=vercel)
-![Next.js](https://img.shields.io/badge/next.js-16-black?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-6-3178c6?style=for-the-badge&logo=typescript&logoColor=white)
-![License: MIT](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)
+[![Deployment](https://img.shields.io/badge/deploy-vercel-black?style=flat-square&logo=vercel)](https://called-la-home.vercel.app/)
+[![Next.js](https://img.shields.io/badge/next.js-16-000000?style=flat-square&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-6-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
 > A practical web application for discovering housing programs within a 10-mile radius of Los Angeles 90029, covering **Burbank**, **Glendale**, and **Pasadena**.
 
