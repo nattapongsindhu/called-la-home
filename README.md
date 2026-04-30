@@ -1,12 +1,13 @@
 # Called LA Home
 
-[![CI](https://github.com/nattapongsindhu/called-la-home/actions/workflows/ci.yml/badge.svg)](https://github.com/nattapongsindhu/called-la-home/actions/workflows/ci.yml)
-[![Deployment](https://img.shields.io/badge/deploy-vercel-black?style=flat-square&logo=vercel)](https://called-la-home.vercel.app/)
+[![CI Status](https://github.com/nattapongsindhu/called-la-home/actions/workflows/ci.yml/badge.svg)](https://github.com/nattapongsindhu/called-la-home/actions)
+[![Vercel Deployment](https://img.shields.io/badge/deploy-vercel-black?style=flat-square&logo=vercel)](https://called-la-home.vercel.app/)
 [![Next.js](https://img.shields.io/badge/next.js-16-000000?style=flat-square&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/typescript-6-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
+[![PWA Ready](https://img.shields.io/badge/PWA-ready-orange?style=flat-square&logo=pwa&logoColor=white)](https://called-la-home.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](https://opensource.org/licenses/MIT)
 
-> A production-ready housing assistance search platform for Los Angeles residents within a 10-mile radius of 90029, covering **Burbank**, **Glendale**, and **Pasadena**.
+> **Professional Housing Resource Aggregator** for Los Angeles 90029, Burbank, Glendale, and Pasadena. Built with a focus on performance, privacy, and maintainability.
 
 Called LA Home is an integrated housing resource platform for the Los Angeles 90029 area and its 10-mile radius. It aggregates reviewed official housing resources into a fast, searchable interface for first-time buyers, renters, and people comparing affordable housing assistance across nearby cities.
 
